@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-
 use App\Models\House;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class HouseSeeder extends Seeder
@@ -23,7 +21,6 @@ class HouseSeeder extends Seeder
         collect($houses)->map(function ($house) {
             return House::factory()->create($house);
         });
-
 
     }
 }

@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
 
         $users = [
             ['name' => 'Faustino Vasquez', 'email' => 'fvasquez@local.com'],
-            ['name' => 'Sebastian Vasquez', 'email' => 'svasquez@local.com']
-           ];
+            ['name' => 'Sebastian Vasquez', 'email' => 'svasquez@local.com'],
+        ];
 
         collect($users)->map(function ($user) {
             return User::factory()->create($user);

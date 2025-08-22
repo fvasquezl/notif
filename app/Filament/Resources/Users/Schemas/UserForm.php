@@ -21,10 +21,10 @@ class UserForm
                     ->required(),
                 TextInput::make('password')
                     ->password()
-                    ->required(fn($livewire) => $livewire instanceof CreateUser)
-                    ->dehydrated(fn($state) => filled($state)),
+                    ->required(fn ($livewire) => $livewire instanceof CreateUser)
+                    ->dehydrated(fn ($state) => filled($state)),
                 Select::make('house_id')
-                    ->relationship('house', 'name')
+                    ->relationship('house', 'name'),
             ]);
     }
 }
