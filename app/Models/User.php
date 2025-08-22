@@ -61,8 +61,8 @@ class User extends Authenticatable
             ->implode('');
     }
 
-    public function branch(): BelongsTo
+    public function house(): BelongsTo
     {
-        return $this->belongsTo(Branch::class);
+        return $this->belongsTo(House::class);
     }
 }
